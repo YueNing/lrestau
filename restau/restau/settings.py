@@ -25,7 +25,7 @@ SECRET_KEY = 'pd2u2ni=@wl#i^tntpkn20q-+lo&$68eqi9dp5nt+7i4#o(o2-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.2.114']
+#ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'restau.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+       # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME':'lrestau',
+        'USER':'root',
+        'PASSWORD':'123456',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
 }
 
